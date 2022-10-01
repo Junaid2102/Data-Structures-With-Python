@@ -1,0 +1,4 @@
+You have to take array input from the user and the separate number from the user as input and you have to find the first and last position of that number in an array
+Input: [5, 7, 7, 8, 8, 10]
+8
+Output: (3, 4)
