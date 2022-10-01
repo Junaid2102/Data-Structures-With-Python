@@ -1,0 +1,5 @@
+You are given list of numbers, obtained by rotating a sorted list an unknown number of times. 
+Write a function to determine the minimum number of times the original sorted list was rotated to obtain the given list.
+
+Input: [5, 6, 9, 0, 2, 3, 4]
+Output: 3
