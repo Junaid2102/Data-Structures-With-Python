@@ -1,0 +1,1 @@
+In this question we'll delete one node and aother node will take it's place not breaking the hierarchy of trees
