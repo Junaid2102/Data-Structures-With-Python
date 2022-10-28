@@ -29,11 +29,28 @@ class BinarySearchTreeNode:
 
         if self.right:
             elements += self.right.in_order_traversal()
-
         return elements
+
+    def pre_order_traversal(self):
+        elements = [self.data]
+        if self.left:
+            elements += self.left.pre_order_traversal()
+        if self.right:
+            elements += self.right.pre_order_traversal()
+        return elements
+
+    def post_order_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.post_order_traversal()
+        if self.right:
+            elements += self.right.post_order_traversal()
+        elements.append(self.data)
+        return elements
+
     def search(self, value):
         if self.data == value:
-            return True
+            print(f"You entered {value} and it is found");
         if value < self.data:
             if self.left:
                 return self.left.search(value)
@@ -44,6 +61,20 @@ class BinarySearchTreeNode:
                 return self.right.search(value)
             else:
                 return False
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
+
+    def find_max(self):
+        if self.right is None:
+            return self.data
+        return self.right.find_max()
+
+    def calculate_sum(self):
+        left_sum = self.left.calculate_sum() if self.left else 0
+        right_sum = self.right.calculate_sum() if self.right else 0
+        return self.data + left_sum + right_sum
 
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[6])
@@ -54,5 +85,11 @@ def build_tree(elements):
 
 numbers = [17, 4, 1, 20, 9, 23, 18, 34]
 numbers_tree = build_tree(numbers)
-print(numbers_tree.in_order_traversal())
+print("In order Traversal: ", numbers_tree.in_order_traversal())
+print("Pre order Traversal: ", numbers_tree.pre_order_traversal())
+print("Post order Traversal: ", numbers_tree.post_order_traversal())
 print(numbers_tree.search(20))
+print("Min: ", numbers_tree.find_min())
+print("Max: ", numbers_tree.find_max())
+print("Sum: ", numbers_tree.calculate_sum())
+
