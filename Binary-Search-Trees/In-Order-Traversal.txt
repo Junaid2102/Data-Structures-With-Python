@@ -1,0 +1,14 @@
+In in order traversal we start from the left subtree to Node and then to right subtree
+                              15
+                              /\
+                             /  \
+                            /    \
+                           12    27
+                           /\    /\
+                          /  \  20 88
+                         /    \  \
+                        7     14  \
+                                   23
+                                   
+                                   
+In Order Traversal: [7, 12, 14, 15, 20, 23, 27, 88]                                   
