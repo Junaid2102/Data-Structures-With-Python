@@ -1,4 +1,6 @@
 In in order traversal we start from the left subtree to Node and then to right subtree
+In Pre Order traversal we start from node to left subtree and then right subtree
+In Post order traversal we start from left subtree and then right subtree and then node
                               15
                               /\
                              /  \
@@ -10,5 +12,7 @@ In in order traversal we start from the left subtree to Node and then to right s
                         7     14  \
                                    23
                                    
-                                   
-In Order Traversal: [7, 12, 14, 15, 20, 23, 27, 88]                                   
+
+Pre Order Traversal: [15, 12, 7, 14, 27, 20, 23, 88]
+In Order Traversal: [7, 12, 14, 15, 20, 23, 27, 88]               
+Post Order Traversal: [7, 14, 12, 23, 20, 88, 27, 15]
